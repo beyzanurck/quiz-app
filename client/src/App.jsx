@@ -3,8 +3,7 @@ import Question from './Question'
 import './App.css'
 
 function App() { 
-
-  const [data, setData] = useState('')
+  const [data, setData] = useState([])
 
   const getData = async () => {
     const response = await fetch("http://localhost:3000/animals");
@@ -22,7 +21,9 @@ function App() {
   
   return (
     <>
-      <Question quiz = {data} />
+      {data.length > 0 ? (
+        <Question quiz={data} />
+      ) : ` `}
     </>
   )
 }
