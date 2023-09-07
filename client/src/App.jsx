@@ -22,13 +22,7 @@ function App() {
   
   return (
     <>
-      {/* <p>{(data !== undefined && data[0] !== undefined) ? data[0].question : ""}</p> */}
-
-      <Question 
-      question = {(data !== undefined && data[0] !== undefined) ? data[0].question : ""}
-      correct_answer = {(data !== undefined && data[0] !== undefined) ? data[0].correct_answer : ""}
-      incorrect_answers = {(data !== undefined && data[0] !== undefined) ? data[0].incorrect_answers : ""}
-      />
+      <Question quiz = {data} />
     </>
   )
 }
