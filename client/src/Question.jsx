@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Answer from './Answer'
 
-export default function Question({quiz}) {
+export default function Question({quiz, resultCallback}) {
 
     const [answers, setAnswers] = useState([])
 
@@ -12,7 +12,10 @@ export default function Question({quiz}) {
       };
     
       const handleResponse = (choice) => {
-        console.log(choice)
+        console.log(choice, choice == quiz.correct_answer)
+        let result = false
+        if(choice == quiz.correct_answer) result = true
+        resultCallback( result )
       }
         
   return (
