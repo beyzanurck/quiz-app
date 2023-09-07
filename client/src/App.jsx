@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import Question from './Question'
 import './App.css'
 
 function App() { 
@@ -20,7 +21,9 @@ function App() {
   
   return (
     <>
-      <p>{(data !== undefined && data[0] !== undefined) ? data[0].question : ""}</p>
+      {/* <p>{(data !== undefined && data[0] !== undefined) ? data[0].question : ""}</p> */}
+
+      <Question />
     </>
   )
 }
