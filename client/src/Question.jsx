@@ -19,13 +19,12 @@ export default function Question({quiz, resultCallback}) {
   return (
     <div>
       
-      <h2>{quiz.question}</h2>
+      <h2 className='header'>{quiz.question}</h2>
 
       {collectAnswers().map((item, index) => (
         <Answer key={index} choice={item} selectCallback={handleResponse} />
       ))}
 
-      
     </div>
   )
 }

@@ -1,0 +1,17 @@
+/* Answer.css */
+
+.answer_buttons {
+  border-radius: 20px; 
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  margin: 10px; 
+}
+
+.oval-button:hover {
+    background-color: #2980b9;
+}
+  
