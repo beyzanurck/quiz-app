@@ -4,6 +4,7 @@ import './App.css'
 
 function App() { 
   const [data, setData] = useState([])
+  const [qindex, setQindex] = useState(0)
 
   const getData = async () => {
     const response = await fetch("http://localhost:3000/animals");
@@ -18,7 +19,7 @@ function App() {
   }, [])
 
   const handleNewQuestion = () => {
-
+    setQindex(qindex+1)
   }
 
 
@@ -26,11 +27,11 @@ function App() {
   return (
     <>
       {data.length > 0 ? (
-        <Question quiz={data[0]} />
+        <Question quiz={data[qindex]} />
       ) : ` `}
 
 
-      {/* <button onClick={handleNewQuestion}>Click</button> */}
+      <button onClick={handleNewQuestion}>Click</button>
     </>
   )
 }

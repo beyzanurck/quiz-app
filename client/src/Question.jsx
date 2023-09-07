@@ -11,6 +11,7 @@ export default function Question({quiz}) {
         return allAnswers;
       };
     
+     
         
   return (
     <div>
