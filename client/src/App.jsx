@@ -6,6 +6,7 @@ function App() {
   const [data, setData] = useState([])
   const [qindex, setQindex] = useState(0)
   const [score, setScore] = useState(0)
+  const [finish, setFinish] = useState(false)
 
 
   const getData = async () => {
@@ -21,7 +22,8 @@ function App() {
   }, [])
 
   const handleNewQuestion = () => {
-    setQindex(qindex+1)
+    if (qindex == data.length-1) setFinish(true)
+    else setQindex(qindex+1)
   }
 
   const handleResult = (result) => {
@@ -30,18 +32,21 @@ function App() {
       setScore(score+1)
     }
     handleNewQuestion()
-
-
   }
   
   return (
     <>
-      {data.length > 0 ? (
-        <Question quiz={data[qindex]} resultCallback={handleResult} />
-      ) : ` `}
-
-
-      <button> {score} </button>
+      { finish ? (
+          <p>Score: {score}</p>
+        ) : (
+          <>
+            {data.length > 0 ? (
+              <Question quiz={data[qindex]} resultCallback={handleResult} />
+            ) : ` `}
+            <button> {score} </button> 
+          </>
+        )
+      }
     </>
   )
 }
