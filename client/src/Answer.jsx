@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Answer({choice}) {
+export default function Answer({choice, selectCallback}) {
   return (
     <div>
-      <p>{choice}</p>
+      <button onClick={ () => {selectCallback(choice)}}>{choice}</button>
     </div>
   )
 }

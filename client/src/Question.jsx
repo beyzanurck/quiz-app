@@ -11,7 +11,9 @@ export default function Question({quiz}) {
         return allAnswers;
       };
     
-     
+      const handleResponse = (choice) => {
+        console.log(choice)
+      }
         
   return (
     <div>
@@ -19,7 +21,7 @@ export default function Question({quiz}) {
       <h2>{quiz.question}</h2>
 
       {collectAnswers().map((item, index) => (
-        <Answer key={index} choice={item} />
+        <Answer key={index} choice={item} selectCallback={handleResponse} />
       ))}
 
       
