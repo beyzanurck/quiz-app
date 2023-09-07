@@ -17,13 +17,20 @@ function App() {
     getData();
   }, [])
 
+  const handleNewQuestion = () => {
+
+  }
+
 
   
   return (
     <>
       {data.length > 0 ? (
-        <Question quiz={data} />
+        <Question quiz={data[0]} />
       ) : ` `}
+
+
+      {/* <button onClick={handleNewQuestion}>Click</button> */}
     </>
   )
 }
