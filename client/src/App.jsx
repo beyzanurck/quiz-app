@@ -37,14 +37,14 @@ function App() {
   return (
     <>
       { finish ? (
-          <p>Score: {score}</p>
+          <p id='p-score'>Score: {score}</p>
         ) : (
-          <>
+          <div className='card'>
             {data.length > 0 ? (
               <Question quiz={data[qindex]} resultCallback={handleResult} />
             ) : ` `}
-            <button> {score} </button> 
-          </>
+            <button id='button-score'> {score} </button> 
+          </div>
         )
       }
     </>

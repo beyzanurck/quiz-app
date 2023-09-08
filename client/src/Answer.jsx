@@ -1,10 +1,10 @@
 import React from 'react'
-import './Answer.css';
+import './App.css'
 
 export default function Answer({choice, selectCallback}) {
   return (
-    <div className='answer_buttons'>
-      <button onClick={ () => {selectCallback(choice)}}>{choice}</button>
-    </div>
+    
+      <button onClick={ () => {selectCallback(choice)}} className='buttons'>{choice}</button>
+    
   )
 }

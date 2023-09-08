@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Answer from './Answer'
+import './App.css'
 
 export default function Question({quiz, resultCallback}) {
 
@@ -17,13 +18,17 @@ export default function Question({quiz, resultCallback}) {
     }
         
   return (
-    <div>
+    <div className='question-component'>
       
-      <h2 className='header'>{quiz.question}</h2>
+      <h2>{quiz.question}</h2>
 
-      {collectAnswers().map((item, index) => (
-        <Answer key={index} choice={item} selectCallback={handleResponse} />
-      ))}
+      <div className='answer-buttons'>
+        {collectAnswers().map((item, index) => (
+            <Answer key={index} choice={item} selectCallback={handleResponse} />
+        ))}
+      </div>
+
+     
 
     </div>
   )

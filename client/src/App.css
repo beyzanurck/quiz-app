@@ -5,6 +5,83 @@
   text-align: center;
 }
 
-.header {
-  color: aquamarine;
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+
+
+.question-component {
+  /* position: absolute;
+  left: 35%;
+  top: 10%; */
+  background-color: #eeedbe;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin-bottom: 5%;
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  color: #c37857;
+  font-family: "Lora", serif;
+}
+
+
+
+/* Answer.css */
+
+.answer-buttons {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.buttons {
+  border-radius: 10px;
+  margin: 1%;
+  font-size: 20px;
+  /* width: 100%; dont use it with flex */
+  
+  background-color: #99b27f;
+  color: #734444;
+  font-family: "Lora", serif;
+}
+
+.buttons:hover {
+  background-color: #d6f8b8;
+}
+
+#button-score{
+  border-radius: 10px;
+  margin: 3%;
+  font-size: 20px;
+  width: 25%;
+  background-color: #99b27f;
+  color: #734444;
+  font-family: "Lora", serif;
+}
+
+#p-score{
+  color: #99b27f;
+  font-family: "Lora", serif;
+  font-size: 40px;
+}
+
+/* Media Query */
+
+/* @media (max-width: 500px) {
+  .question-component {
+    width: 90%;
+    left: 10%;
+  }
+} */
+
+/* make margin auto to center  flex box*/
