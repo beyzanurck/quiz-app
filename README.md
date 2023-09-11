@@ -21,5 +21,5 @@ This project is a Techtonica assignment. Questions coming from Trivia API are pr
 ### Instructions: 
 https://github.com/Techtonica/curriculum/blob/main/projects/week8GameREADME.md
 
-![Quiz App Demo](quiz-app-75%.gif)
+![Quiz App Demo](quizApp.gif)
 
